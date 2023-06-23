@@ -50,10 +50,10 @@
             <a class="nav-link" href="#">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="search.php">Search</a>
+            <a class="nav-link" href="../php/search.php">Search</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="logout.php">Logout</a>
+            <a class="nav-link" href="../php/logout.php">Logout</a>
           </li>
         </ul>
       </div>
@@ -66,7 +66,7 @@
         <h2>Available centres</h2>
       </div>
       <div class="col-6 d-flex justify-content-end">
-        <a class="btn btn-primary" href="create.php" role="button">Add a new centre</a>
+        <a class="btn btn-primary" href="../php/create.php" role="button">Add a new centre</a>
       </div>
     </div>
     <table class="table table-bordered table-striped">
@@ -102,7 +102,7 @@
           <td>$row[closing]</td>
           <td>$row[totcount]</td>
           <td>
-            <a class='btn btn-primary btn-sm' href='delete.php?cid=$row[id]'>Delete</a>
+            <a class='btn btn-primary btn-sm' href='../php/delete.php?cid=$row[id]'>Delete</a>
         </tr>
         ";
       }

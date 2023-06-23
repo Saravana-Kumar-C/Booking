@@ -8,5 +8,5 @@ else{
   header("Location: login.php");
 }
 //include 'profile.html';
-include('../profile.html');
+include('../pages/profile.html');
 ?>
