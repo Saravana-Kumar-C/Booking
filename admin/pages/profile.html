@@ -93,16 +93,24 @@
       $result = $connection->query($sql);
 
       
-
-      while($row = $result->fetch_assoc()){
+      if(mysqli_num_rows($result) > 0){
+        while($row = $result->fetch_assoc()){
+          echo"
+          <tr>
+            <td>$row[name]</td>
+            <td>$row[opening]</td>
+            <td>$row[closing]</td>
+            <td>$row[totcount]</td>
+            <td>
+              <a class='btn btn-danger btn-sm' href='../php/delete.php?cid=$row[id]&centre=$row[name]'>Delete</a></td>
+          </tr>
+          ";
+        }
+      }
+      else{
         echo"
         <tr>
-          <td>$row[name]</td>
-          <td>$row[opening]</td>
-          <td>$row[closing]</td>
-          <td>$row[totcount]</td>
-          <td>
-            <a class='btn btn-primary btn-sm' href='../php/delete.php?cid=$row[id]'>Delete</a>
+          <td colspan='5'>No Centres Available</td>
         </tr>
         ";
       }

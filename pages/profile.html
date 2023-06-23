@@ -86,14 +86,23 @@
         $sql = "SELECT * FROM centre";
         $result = $connection->query($sql);
   
-        while($row = $result->fetch_assoc()){
-          echo "
+        if(mysqli_num_rows($result) > 0){
+          while($row = $result->fetch_assoc()){
+            echo "
+            <tr>
+              <td>$row[name]</td>
+              <td>$row[opening]</td>
+              <td>$row[closing]</td>
+              <td>$row[totcount]</td>
+            </tr>";
+          }
+        }
+        else{
+          echo"
           <tr>
-            <td>$row[name]</td>
-            <td>$row[opening]</td>
-            <td>$row[closing]</td>
-            <td>$row[totcount]</td>
-          </tr>";
+            <td colspan='4'>No Centres Available</td>
+          </tr>
+          ";
         }
         ?>
       </tbody>

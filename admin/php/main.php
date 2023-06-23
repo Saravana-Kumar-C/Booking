@@ -1,4 +1,5 @@
 <?php
 require 'function.php';
-include('../index.html');
+header("Location: ../index.html");
+// include('../index.html');
 ?>

@@ -1,6 +1,6 @@
 <?php 
-if(isset($_GET["cid"])){
-    $id=$_GET["cid"];
+if(isset($_GET["did"])){
+    $id=$_GET["did"];
     $centre=$_GET["centre"];
 
     $servername="localhost";
@@ -10,11 +10,12 @@ if(isset($_GET["cid"])){
 
     $connection = new mysqli($servername,$username,$password,$database);
 
-    $sql = "DELETE FROM details WHERE centre='$centre'";
+    $sql = "DELETE FROM details WHERE id=$id";
     $connection->query($sql);
-    $sql = "DELETE FROM centre WHERE id=$id";
+    $sql = "UPDATE centre SET totcount = totcount-1 WHERE name='$centre'";
     $connection->query($sql);
 }
-header("Location: index.php");
-exit;
+header("Location: ../pages/profile.html");
+// header("Location: search.php");
+// exit;
 ?>

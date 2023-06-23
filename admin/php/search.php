@@ -95,6 +95,7 @@
                                     <th>Address</th>
                                     <th>Slot Date</th>
                                     <th>Status</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -118,6 +119,8 @@
                                                     <td><?= $items['address']; ?></td>
                                                     <td><?= $items['date']; ?></td>
                                                     <td><?= $items['status']; ?></td>
+                                                    <td>
+                                                      <a class='btn btn-danger btn-sm' href="delete-details.php?did=<?= $items['id']; ?>&centre=<?= $items['centre']; ?>">Delete</a></td>
                                                 </tr>
                                                 <?php
                                             }
@@ -126,7 +129,7 @@
                                         {
                                             ?>
                                                 <tr>
-                                                    <td colspan="4">No Record Found</td>
+                                                    <td colspan='6'>No Record Found</td>
                                                 </tr>
                                             <?php
                                         }

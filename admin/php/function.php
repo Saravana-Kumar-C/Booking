@@ -25,7 +25,7 @@ function update(){
 
     global $conn;
 
-    $stmt = $conn->prepare('UPDATE covid SET fullname=?, email=?, username=?, password=? WHERE username=?');
+    $stmt = $conn->prepare('UPDATE admins SET fullname=?, email=?, username=?, password=? WHERE username=?');
 
     // Bind the parameters
     $stmt->bind_param('ssss', $fullname, $email, $username, $password);
@@ -59,13 +59,13 @@ function register(){
     exit;
   }
 
-  $user = mysqli_query($conn, "SELECT * FROM covid WHERE username = '$username'");
+  $user = mysqli_query($conn, "SELECT * FROM admins WHERE username = '$username'");
   if(mysqli_num_rows($user) > 0){
     echo "Username Has Already Taken";
     exit;
   }
   else{
-    $stmt = $conn->prepare('INSERT INTO covid (fullname,email,username,password) VALUES (?, ?, ?, ?)');
+    $stmt = $conn->prepare('INSERT INTO admins (fullname,email,username,password) VALUES (?, ?, ?, ?)');
     $stmt->bind_param('ssss', $fullname,$email,$username,$password);
     if($stmt->execute()){
       echo "Registration Successful";
@@ -87,7 +87,7 @@ function login(){
   $username = $_POST["username"];
   $password = $_POST["password"];
 
-  $user = mysqli_query($conn, "SELECT * FROM covid WHERE username = '$username'");
+  $user = mysqli_query($conn, "SELECT * FROM admins WHERE username = '$username'");
 
   if(mysqli_num_rows($user) > 0){
 
