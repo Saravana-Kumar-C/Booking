@@ -5,7 +5,7 @@ session_start();
 // ini_set("session.save_handler", "redis");
 // ini_set("session.save_path", "tcp://localhost:6379");
 
-$conn = mysqli_connect("localhost:3306", "root", "root", "mydb");
+$conn = mysqli_connect("localhost:3306", "root", "", "mydb");
 
 // IF
 if(isset($_POST["action"])){
