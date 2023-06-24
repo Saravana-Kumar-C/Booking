@@ -11,6 +11,7 @@
     /* Add some custom styles here */
     body {
       padding-top: 4rem;
+      font-family: 'Roboto', sans-serif;
     }
     .navbar-brand {
       font-weight: bold;
@@ -38,9 +39,12 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Covid-free</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../../img/icon.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+        Covid Vaccination Booking
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -73,8 +77,8 @@
 
                                 <form action="" method="GET">
                                     <div class="input-group mb-3">
-                                        <input type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control" placeholder="Search data">
-                                        <button type="submit" class="btn btn-primary">Search</button>
+                                        <input class="form-control me-2" type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control" placeholder="Search data">
+                                        <button type="submit" class="btn btn-outline-success mx-3">Search</button>
                                     </div>
                                 </form>
 
@@ -88,7 +92,7 @@
                 <div class="card mt-4">
                     <div class="card-body">
                         <table class="table table-bordered">
-                            <thead>
+                            <thead class="thead-dark">
                                 <tr>
                                     <th>Vaccination centre</th>
                                     <th>Name</th>
@@ -133,6 +137,14 @@
                                                 </tr>
                                             <?php
                                         }
+                                    }
+                                    else
+                                    {
+                                        ?>
+                                            <tr>
+                                                <td colspan='6'>Search for Centres</td>
+                                            </tr>
+                                        <?php
                                     }
                                 ?>
                             </tbody>

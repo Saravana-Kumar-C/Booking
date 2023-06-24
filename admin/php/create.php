@@ -58,6 +58,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Add new centre</title>
     <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 2rem;
+        }
         .container {
             display: flex;
             justify-content: center;
@@ -79,6 +86,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+        <img src="../../img/icon.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+        Covid Vaccination Booking</a>
+    </div>
+    </nav>
     <div class="container">
         <div class="box">
             <h2>Add new vaccination centre</h2>
@@ -127,7 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 <div class="col-sm-6 d-flex justify-content-end">
-                <a class="btn btn-outline-primary" href="/admin/php/index.php">Cancel</a>
+                <a class="btn btn-outline-danger" href="/admin/php/index.php">Cancel</a>
                 </div>
                 </div>
 
