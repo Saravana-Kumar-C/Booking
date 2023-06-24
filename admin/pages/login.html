@@ -53,52 +53,69 @@
     </style>
   </head>
   <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="../../img/icon.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
-      Covid Vaccination Booking</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="../php/main.php">Home</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link active" href="#">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="../php/register.php">Register</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../../img/icon.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+          Covid Vaccination Booking</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../php/main.php">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link active" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../php/register.php">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-<div class="container">
-  <div class="row justify-content-center mt-5">
-    <div class="col-md-6">
-      <div class="box">
-        <h2>Admin Login</h2>
-        <form autocomplete="off" action="" method="post">
-            <input type="hidden" id="action" value="login">
-            <div class="mb-3">
-              <label class="form-label">Username</label>
-              <input type="text" name="username" id="username" class="form-control" required>
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Password</label>
-              <input type="password" name="password" id="password" class="form-control" required>
-            </div>
-            <button type="button" class="btn btn-primary btn-block" onclick="submitData();">login</button>
-            <br>
-            <?php require '../php/script.php'; ?>
-          </form>
+    <div class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+          <div class="box">
+            <h2>Admin Login</h2>
+            <form autocomplete="off" action="" method="post">
+              <input type="hidden" id="action" value="login">
+              <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" name="username" id="username" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" name="password" id="password" class="form-control" required>
+              </div>
+              <button type="button" class="btn btn-primary btn-block" onclick="submitData();">login</button>
+              <br>
+              <?php require '../php/script.php'; ?>
+            </form>
           </div>
         </div>
       </div>
     </div>
+
+    
+    <div class="b-example-divider"></div>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top fixed-bottom">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Saravana Kumar C</span>
+      </div>
+  
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="mx-3"><a class="text-body-secondary" href="https://instagram.com/sa.raw.na?igshid=MzNlNGNkZWQ4Mg=="><img src="../../img/instagram.svg" class="bi" width="24" height="24"></svg></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="https://www.linkedin.com/in/saravana-kumar-c-98144023a/"><img src="../../img/linkedin.svg" class="bi" width="24" height="24"></svg></a></li>
+      </ul>
+  </footer>
   </body>
 </html>
