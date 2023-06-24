@@ -28,4 +28,4 @@ Covid Vaccination Booking Web Application using php
 - Logout
 
 ## Hosted Website
-- [Covid Vaccination Website by Saravana Kumar C](https://covidvaccinationbooking.000webhostapp.com/index.html)
+- [Covid Vaccination Booking Website by Saravana Kumar C](https://covidvaccinationbooking.000webhostapp.com/index.html)
