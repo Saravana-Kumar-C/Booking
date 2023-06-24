@@ -13,18 +13,19 @@ Covid Vaccination Booking Web Application using php
 - Admin
 
 ## User Use cases:
-- login
-- signup
-- search for Vaccination centre
-- apply for vaccination (only 10 candidates allowed per centre)
-- logout
+- Login
+- Signup
+- Search for Vaccination centre
+- Apply for vaccination (only 10 candidates allowed per centre)
+- Logout
 
 ## Admin Use Cases
-- login (for admin use separate UI)
+- Login (for admin use separate UI)
 - Add Vaccination centres
 - Get dosage details (group by centres)
 - Remove vaccination centres
 - Remove booked users
+- Logout
 
 ## Hosted Website
 - [Covid Vaccination Website by Saravana Kumar C](https://covidvaccinationbooking.000webhostapp.com/index.html)
